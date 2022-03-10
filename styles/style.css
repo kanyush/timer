@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Amatic SC", sans-serif;
+  }
+  
+  button {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    background: none;
+    border: 0;
+    outline: none;
+  }
+  
+  .holidays {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .holidays__content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 6px;
+    margin-bottom: 16px;
+  }
+  
+  .holiday-label input {
+    position: absolute;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .holiday {
+    display: grid;
+    grid-template-rows: 24px auto;
+    grid-row-gap: 10px;
+    justify-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px #ddd, 0 0 0 0 rgba(123, 105, 241, .5);
+    will-change: transform, background-color, color;
+    transform: scale(1);
+    cursor: pointer;
+    user-select: none;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .holiday img {
+    height: 100%;
+  }
+  
+  .holiday-label input:focus + .holiday {
+    box-shadow: 0 0 0 4px rgba(123, 105, 241, .5);
+  }
+  
+  .holiday-label input:checked + .holiday {
+    transform: scale(0.9);
+    background: slateblue;
+    color: white;
+  }
+  
+  .holidays__btn {
+    border-radius: 8px;
+    font-size: 18px;
+    background: darkslateblue;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(123, 105, 241, 0.6);
+    will-change: transform, box-shadow;
+    transform: scale(1);
+    font-weight: bold;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .holidays__btn:focus {
+    box-shadow: 0 0 0 2px rgba(123, 105, 241, 0.6);
+  }
+  
+  .holidays__btn:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 8px rgba(123, 105, 241, 0);
+  }
+  
+  .holidays__btn:disabled {
+    opacity: .4;
+  }
+  
+  .timer {
+    display: grid;
+    grid-template-columns: 40px 10px 40px 10px 40px 10px 40px;
+    justify-content: center;
+  }
+  
+  .timer__cell {
+    background: slateblue;
+    padding: 4px 0;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  .timer__divider {
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 0;
+  }
+  

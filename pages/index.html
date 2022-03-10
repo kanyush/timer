@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <section class="holidays">
+      <h1>Выберите праздник:</h1>
+      <div class="holidays__content">
+        <label class="holiday-label">
+          <input type="radio" name="holiday" value="2020-03-06" />
+          <div class="holiday">
+            <img src="/images/friday.png" alt="виски" />
+            <span>Пятница</span>
+          </div>
+        </label>
+        <label class="holiday-label">
+          <input type="radio" name="holiday" value="2020-06-01" />
+          <div class="holiday">
+            <img src="/images/summer.png" alt="зонт на песке" />
+            <span>Лето</span>
+          </div>
+        </label>
+        <label class="holiday-label">
+          <input type="radio" name="holiday" value="2020-11-30" />
+          <div class="holiday">
+            <img src="/images/halloween.png" alt="Тыква" />
+            <span>Хэллоуин</span>
+          </div>
+        </label>
+        <label class="holiday-label">
+          <input type="radio" name="holiday" value="2020-12-01" />
+          <div class="holiday">
+            <img src="/images/winter.png" alt="снег за окном" />
+            <span>Зима</span>
+          </div>
+        </label>
+        <label class="holiday-label">
+          <input type="radio" name="holiday" value="2020-12-25" />
+          <div class="holiday">
+            <img src="/images/christmas.png" alt="звезда елки" />
+            <span>Рождество</span>
+          </div>
+        </label>
+        <label class="holiday-label">
+          <input type="radio" name="holiday" value="2021-01-01" />
+          <div class="holiday">
+            <img src="/images/new_year.png" alt="звезда елки" />
+            <span>Новый год</span>
+          </div>
+        </label>
+      </div>
+      <button class="holidays__btn">Показать таймер</button>
+    </section>
+    <section class="timer">
+      <div class="timer__cell" id="days">00 д</div>
+      <div class="timer__divider">:</div>
+      <div class="timer__cell" id="hours">00 ч</div>
+      <div class="timer__divider">:</div>
+      <div class="timer__cell" id="minutes">00 м</div>
+      <div class="timer__divider">:</div>
+      <div class="timer__cell" id="seconds">00 с</div>
+    </section>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
